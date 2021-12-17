@@ -1,16 +1,16 @@
 # HiImagePicker
 本地图片选择器
 
-# 基本使用
+### 基本使用
 
 1. 选择图片
 ```
  ImageSelector.create()
-                .setCount(9)
+                .setCount(9)// 最大选择数量
                 .multi()
-                .origin(mImageList)
-                .showCamera(true)
-                .start(this,SELECT_IMAGE_REQUEST);
+                .origin(mImageList) // 前一次选择的图片路径集合
+                .showCamera(true) // 是否显示拍照图标
+                .start(this,SELECT_IMAGE_REQUEST); // 
 ```
 2. 接收选择图片集合路径
 ```
@@ -26,7 +26,7 @@
         }
     }
 ```
-# 依赖第三方
+### 依赖第三方
 
 ```
 implementation 'com.guolindev.permissionx:permissionx:1.6.1'
